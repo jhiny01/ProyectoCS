@@ -44,11 +44,11 @@ public class controperso_res extends HttpServlet {
         p.setOcupacion(ocp);
         
         PersonaDAO pdao = new PersonaDAO();
-        ArrayList<personadto> listaP = pdao.consultarPersona(p);
+        //ArrayList<personadto> listaP = pdao.consultarPersona(p);
         
         
         
-        sesion.setAttribute("listaP", listaP);
+        //sesion.setAttribute("listaP", listaP);
         
         response.sendRedirect("./jsp/persona.jsp");
     }

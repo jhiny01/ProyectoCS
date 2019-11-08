@@ -41,6 +41,10 @@
         <servlet-class>controlador.contregistro</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>conteliminar</servlet-name>
+        <servlet-class>controlador.conteliminar</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>contmodificar</servlet-name>
         <servlet-class>controlador.contmodificar</servlet-class>
     </servlet>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>contregistro</servlet-name>
         <url-pattern>/contregistro.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>conteliminar</servlet-name>
+        <url-pattern>/conteliminar.do</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>contmodificar</servlet-name>

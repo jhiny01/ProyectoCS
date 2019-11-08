@@ -112,11 +112,12 @@
             <div class="med"><CENTER> <font  size="40" face ="Indie Flower">Registrar Datos De Usuario</font></CENTER></div>
                                    
             <div class="fin">
+                ${sessionScope.msg}
             <center>
                     <nav>
                         <ul> <center> 
                                
-                                       <form action="../Controperso" method="post">    
+                                       <form action="../contregistro.do" method="post">    
                                    <p>
                                     <label for="id_empleado">Numero de Empleado:</label>
                                     <input type="text" name="id_empleado" value=""/>

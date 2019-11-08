@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import modelo.dao.PersonaDAO;
+import modelos.dtos.personadto;
 
 /**
  *
@@ -26,17 +28,31 @@ public class conteliminar extends HttpServlet {
         
         HttpSession sesion = request.getSession();
         
-        String id_emp = request.getParameter("identificacion de empleado");
-        String num_empl = request.getParameter("numero de empleado");
+        String id_emp = request.getParameter("id_empleado");
+        /*String num_empl = request.getParameter("num_empleado");
         String nom = request.getParameter("nombre");
         String ape = request.getParameter("apellido");
         String tel = request.getParameter("telefono");
         String dir = request.getParameter("direccion");
         String corr = request.getParameter("correo");
-        String ocp = request.getParameter("ocupacion");
+        String ocp = request.getParameter("ocupacion");*/
+         if (id_emp != null){
+            personadto p = new personadto();
         
-        sesion.setAttribute("Var1",nom + " - " + ape);
+        p.setId_empleado(Integer.parseInt(id_emp));
+        /*p.setNum_empleado(Integer.parseInt(num_empl));
+        p.setNombre(nom);
+        p.setApellido(ape);
+        p.setTelefono(tel);
+        p.setDireccion(dir);
+        p.setCorreo(corr);
+        p.setOcupacion(ocp);*/
         
+        PersonaDAO pdao = new PersonaDAO();
+        boolean aux = pdao.eliminarPersona(p);
+        
+        sesion.setAttribute("msg", "Usuario eliminado exitoso: " + aux);
+        }
         response.sendRedirect("./jsp/eliminar.jsp");
     }
 

@@ -112,18 +112,20 @@
             <div class="med"><CENTER> <font  size="40" face ="Indie Flower">Eliminar Datos De Usuario</font></CENTER></div>
             
             <div class="fin">
+                ${sessionScope.msg}
             <center>
                     <nav>
                         <ul> <center>
-                                <form action="../PersonaControlador" method="post">
+                                <form action="../conteliminar.do" method="post">
                                     <p>
-                                    <label for="id_empleado">Numero de Empleado:</label>
-                                    <input type="text" name="numero_empleado" value=""/>
-                                    </p>
-                                    <p>
-                                    <label for="num_empleado">Identificacion del Empleado:</label>
+                                    <label for="id_empleado">Identificacion del Empleado:</label>
                                     <input type="text" name="id_empleado" value=""/>
                                     </p>
+                                   <!-- <p>
+                                    <label for="num_empleado">Numero de Empleado:</label>
+                                    <input type="text" name="num_empleado" value=""/>
+                                    </p>
+                                    
                                     <p>
                                     <label for="nombre">Nombres:</label>
                                     <input type="text" name="nombre" value=""/>
@@ -146,7 +148,7 @@
                                     </p>
                                      <p>
                                     <label for="ocupacion">Ocupacion:</label>
-                                    <input type="text" name="ocupacion" value=""/>
+                                    <input type="text" name="ocupacion" value=""/--> 
                                     <p>
                                     <input type="submit" value="Eliminar"/>
                                     </p>
