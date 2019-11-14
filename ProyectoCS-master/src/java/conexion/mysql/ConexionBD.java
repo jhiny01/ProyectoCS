@@ -11,7 +11,7 @@ public class ConexionBD {
 			mysqlDS = new MysqlDataSource();
 			mysqlDS.setURL("jdbc:mysql://localhost/prueba1");
 			mysqlDS.setUser("root");
-			mysqlDS.setPassword("root");
+			mysqlDS.setPassword("");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

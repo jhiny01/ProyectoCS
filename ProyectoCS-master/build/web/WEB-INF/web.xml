@@ -48,6 +48,10 @@
         <servlet-name>contmodificar</servlet-name>
         <servlet-class>controlador.contmodificar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>contconsultar</servlet-name>
+        <servlet-class>controlador.contconsultar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Procesar</servlet-name>
         <url-pattern>/procesar.do</url-pattern>
@@ -91,6 +95,10 @@
     <servlet-mapping>
         <servlet-name>contmodificar</servlet-name>
         <url-pattern>/contmodificar.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>contconsultar</servlet-name>
+        <url-pattern>/contconsultar.do</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Controperso</servlet-name>

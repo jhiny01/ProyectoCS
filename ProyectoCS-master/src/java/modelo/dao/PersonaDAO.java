@@ -110,10 +110,9 @@ public class PersonaDAO {
         return aux;
     }
     
-    public ArrayList<personadto> modificarPersona(personadto persona)
+    public boolean modificarPersona(personadto persona)
     {
-         ArrayList<personadto> personas = new ArrayList();
-        
+         boolean aux = false; 
         try {
             DataSource ds = ConexionBD.getMySQLDataSource(); 
             
@@ -135,12 +134,13 @@ public class PersonaDAO {
             ps.setString(7, persona.getCorreo());
             ps.setString(8, persona.getOcupacion());
             
-            ps.execute();
-            con.close();
+           ps.execute();
+           con.close();
+           aux = true; 
            
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        return personas;
+        return aux;
     }
 }
